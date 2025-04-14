@@ -8,12 +8,17 @@ if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'staff') {
 
 <html>
     <head>
+        <link rel="stylesheet" href="form.css"/>
     </head>
     <body>
-        <?php if ($valid): ?>
-        UPDATE USERS PAGE WIP!
-        <?php else: ?>
-        YOU CANNOT ACCESS THIS PAGE!
-        <?php endif; ?>
+        <div class="form-container">
+            <form action="handle_update_user.php" method="POST">
+                <div class="form-group">
+                <label for="user_id">User ID:</label>
+                <input id="user_id" type="text" name="user_id" placeholder="Enter User ID">
+                </div>
+                <input type="submit" class="submit-btn" value="Submit"/>
+            </form>
+        </div>
     </body>
 </html>

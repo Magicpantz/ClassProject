@@ -20,10 +20,9 @@ $user_type = isset($_SESSION['user_type']) ? $_SESSION['user_type'] : 'guest';
           <a href="update_users.php">Update Users</a>
         <?php elseif ($user_type === 'patron'): ?>
           <!--PATRON-->
-          <a href="catalog.php">Catalog</a>
-          <a href="fines.php">Fines</a>
-          <a href="account.php">My Account</a>
-          <a href="books.php">Books</a>
+          <a href="pay_fines.php">Fines</a>
+          <a href="user_account.php">My Account</a>
+          <a href="user_books.php">Books</a>
         <?php else: ?>
             <!--GUEST-->
             <a href="login.php">Login</a>
