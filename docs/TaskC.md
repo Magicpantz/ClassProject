@@ -3,9 +3,6 @@ title: Task C Creating and Loading Relations
 date: \today{}
 ---
 
-*This is preliminary report* In this report are the `.dat` files as well as the
-`load` and `create` sql files.
-
 # Create
 
 ```sql

@@ -3,9 +3,6 @@ title: Task B HTML Forms
 date: \today{}
 ---
 
-*This is preliminary report* In this report are the views i.e. `.php` files
-containing the forms and such.
-
 # Login Page
 
 ```php
