@@ -1,29 +1,33 @@
 <?php
 session_start();
+include_once("db_conn.php");
 
-// connect to the database
-$host = "db";
-$user = "root";
-$password = "password";
-$database = "test_db";
-$port = 3306;
-$conn = new mysqli($host, $user, $password, $database, $port);
+// Retreive the user details from the request
+$user_id = $_POST["user_id"];
+$password = $_POST["password"];
 
-// login using the database
-$username = $_POST['username'];
-$password = $_POST['password'];
+$login_query = mysqli_real_escape_string($conn, "SELECT UserLibraryID FROM User WHERE UserLibraryID=$user_id;");
+$result = mysqli_query($conn, $login_query);
 
-// TODO fix this username != userid
-$login_query = mysqli_real_escape_string($conn, "SELECT UserLibraryID FROM User WHERE UserLibraryID=$username;");
+// If the user doesn't exist in the database then return to login page
+if ($result->fetch_all() == []) {
+  // DEBUG echo "Invalid Username or Password";
+  header("Location: ../index.php");
+  exit();
+}
 
-// what shows here?
-$result = $conn->query($statement);
-echo $result;
+$user_type_query = mysqli_real_escape_string($conn, "SELECT UserLibraryID FROM Staff WHERE UserLibraryID=$user_id;");
+$result = mysqli_query($conn, $user_type_query);
 
-// set the user_type in the session
-$_SESSION['user_type'] = $_POST['user_type'];
-
-// redirect
-header("Location: ../pages/catalog_page.php");
-exit();
+// Handle user type
+if ($result->fetch_all() != []) {
+  $_SESSION["user_type"] = "admin"; // TODO this is definitely a security venerability
+  header("Location: ../pages/catalog_page.php");
+  exit();
+}
+else {
+  $_SESSION["user_type"] = "patron";
+  header("Location: ../pages/catalog_page.php");
+  exit();
+}
 ?>

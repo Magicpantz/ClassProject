@@ -2,33 +2,34 @@
 
 School project or smth.
 
-## Build
+## Setup
 
-Just run `docker-compose up -d` should just work the site is located on port `8000`
+- Run `docker-compose up -d` should just work the site is located on port `8000`
+- Run `sql/init.sh` will initialize the database
 
 ## TODO
 
 - [x] Add an `sql` directory containing data for initial tables
 - [x] Migrate to pico
-- [ ] Sign in page
-- [ ] Sign up page
+- [x] Sign in page
+- [x] Sign up page
 - [ ] Catalog page (high prio)
-    - [ ] Patron catalog view
-    - [ ] Staff catalog view
+    - [ ] Patron catalog view (in-progress)
+    - [ ] Staff catalog view (in-progress)
 - [ ] Update users page
 - [ ] Update fines page
 - [ ] Update books page
 - [ ] Checkout books page
 - [ ] Pay fines page
-- [ ] Handle sign up user
-- [ ] Handle login user
+- [ ] Handle sign up user (in-progress)
+- [x] Handle login user
 - [ ] Handle update users (admin)
 - [ ] Handle update books (admin)
 - [ ] Handle update fines (admin)
 - [ ] Handle user fines (user)
 - [ ] Handle checkout (user)
 - [ ] Security Tests Page
-- [ ] Add tests*
+- [ ] Testing*
 
-* Just nice to have, low prio
+* Just nice to have, low prio don't have time to make good software
 
