@@ -13,13 +13,13 @@ School project or smth.
 - [x] Migrate to pico
 - [x] Sign in page
 - [x] Sign up page
-- [ ] Catalog page (high prio)
-    - [ ] Patron catalog view (in-progress)
-    - [ ] Staff catalog view (in-progress)
+- [x] Catalog page (high prio)
+    - [x] Patron catalog view
+    - [x] Staff catalog view
 - [ ] Update users page
 - [ ] Update fines page
-- [ ] Update books page
-- [ ] Checkout books page
+- [ ] Update books page (in-progress)
+- [ ] Checkout books page (in-progress)
 - [ ] Pay fines page
 - [ ] Handle sign up user (in-progress)
 - [x] Handle login user
