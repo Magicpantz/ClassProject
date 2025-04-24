@@ -1,32 +1,29 @@
 <html>
 <head>
-  <link rel="stylesheet" href="form.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
 <body>
-  <!--USER LOGIN-->
-  <div class="form-container">
-    <form action="handle_login.php" method="POST">
-      <div class="form-group">
-        <label for="username">Name:</label>
-        <input id="username" type="text" name="username" placeholder="Enter your name">
-      </div>
-      
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input id="password" type="password" name="password" placeholder="Enter your password">
-      </div>
-      
-      <div class="form-group">
-        <label for="user_type">User Type:</label>
-        <select id="user_type" name="user_type">
-          <option value="patron">Patron</option>
-          <option value="staff">Staff</option>
-        </select>
-      </div>
-      
-      <input type="submit" class="submit-btn" value="Submit">
-    </form>
-    <a href="sign_up.php">Sign Up?</a>
+  <div class="container">
+  <form>
+    <fieldset>
+      <label>
+      UserID
+      <input
+       name="user_id"
+       placeholder="Enter username..."
+      />
+      </label>
+      <label>
+      Password
+      <input
+       name="password"
+       type="password"
+       placeholder="Enter password..."
+      />
+      </label>
+    </fieldset>
+    <input type="submit" value="Submit"/>
+  </form>
   </div>
 </body>
 </html>
